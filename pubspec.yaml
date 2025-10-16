@@ -1,0 +1,81 @@
+name: prime_travel_flutter_ui_kit
+description: RentRestx Ui Kit.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+# Flutter version: 3.32.2
+# Dart version: 3.8.1
+version: 1.0.4
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  get: ^4.7.2
+  pinput: ^2.2.31
+  persistent_bottom_nav_bar: ^6.2.1
+  flutter_switch: ^0.3.2
+  syncfusion_flutter_datepicker: ^29.2.11
+  map_launcher: ^3.5.0
+  intl: any
+  share_plus: ^7.0.2
+  flutter_rating_bar: ^4.0.1
+  image_picker: ^0.8.7+5
+  shared_preferences: ^2.5.3
+  flutter_localization: ^0.3.2
+  flutter_localizations:
+    sdk: flutter
+  http: ^1.5.0
+  signalr_netcore: ^1.3.4
+  location: ^6.0.0
+  flutter_polyline_points: ^3.0.1
+  google_maps_flutter: ^2.5.0
+  geolocator: ^14.0.2
+  permission_handler: ^12.0.1
+  get_storage: ^2.1.1
+  connectivity_plus: ^6.1.5
+  flutter_secure_storage: ^9.2.4
+  dio: ^5.9.0
+  jwt_decoder: ^2.0.1
+  provider: ^6.1.5
+  url_launcher: ^6.3.2
+  flutter_blue_plus: ^2.0.0
+  pay: ^3.2.1
+  flutter_local_notifications: ^19.4.1
+  flutter_map: ^8.2.1
+  firebase_core: ^4.1.1
+  firebase_auth: ^6.1.0
+  google_sign_in: ^6.2.1
+  firebase_database: ^12.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/gpay.json
+  fonts:
+    - family: Satoshi_Regular
+      fonts:
+        - asset: assets/fonts/Satoshi-Regular.otf
+    - family: Satoshi_Medium
+      fonts:
+        - asset: assets/fonts/Satoshi-Medium.otf
+    - family: Satoshi_Bold
+      fonts:
+        - asset: assets/fonts/Satoshi-Bold.otf
+    - family: Satoshi_Italic
+      fonts:
+        - asset: assets/fonts/Satoshi-Italic.otf
+    - family: Satoshi_light
+      fonts:
+         - asset: assets/fonts/Satoshi-Light.otf
+

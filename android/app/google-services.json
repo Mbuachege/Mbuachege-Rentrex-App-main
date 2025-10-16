@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "383632263981",
+    "firebase_url": "https://react-app-8ea4d-default-rtdb.firebaseio.com",
+    "project_id": "react-app-8ea4d",
+    "storage_bucket": "react-app-8ea4d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383632263981:android:1ad91e58a1501aeb8021a4",
+        "android_client_info": {
+          "package_name": "com.app.prime_travel_flutter_ui_kit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383632263981-ufevuv34hjf5d5pi9medl24o99b4hkqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.prime_travel_flutter_ui_kit",
+            "certificate_hash": "50c5c806dedf7098dae06261778301fcdaa197a9"
+          }
+        },
+        {
+          "client_id": "383632263981-5o2i9bpjgd1qicotf7d3abeo8fcso8fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQfwFu_pNtPwLsyTSbV-iJGpqKx58ZCwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383632263981-5o2i9bpjgd1qicotf7d3abeo8fcso8fo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "383632263981-fondm4sp7sk07em9b8b4knrs444qrj04.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.primeTravelFlutterUiKit"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
