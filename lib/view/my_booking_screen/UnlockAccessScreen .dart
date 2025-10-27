@@ -68,6 +68,7 @@ class _UnlockAccessScreenState extends State<UnlockAccessScreen> {
     try {
       final bookings = await BookingUnlockApi().getBookingsByGuest();
       if (bookings.isNotEmpty) {
+        if (!mounted) return;
         setState(() {
           booking = bookings.first;
           _prop = LatLng(booking!.latitude, booking!.longitude);

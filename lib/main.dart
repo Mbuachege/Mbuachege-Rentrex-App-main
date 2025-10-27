@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 // Controllers
@@ -34,7 +33,7 @@ Future<void> main() async {
 
   Get.put(HomeControllerCopy(), permanent: true);
 
-  final baseUrl = 'http://appvacation.digikatech.africa';
+  const baseUrl = 'http://appvacation.digikatech.africa';
   Get.put<AuthApi>(AuthApi(baseUrl), permanent: true);
   Get.put<FirebaseServices>(FirebaseServices(baseUrl), permanent: true);
 

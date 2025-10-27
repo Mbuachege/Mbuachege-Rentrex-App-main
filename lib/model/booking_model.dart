@@ -41,24 +41,26 @@ class Booking {
 
   factory Booking.fromJson(Map<String, dynamic> json) {
     return Booking(
-      id: json['id'],
-      unitId: json['unitId'],
-      guestId: json['guestId'],
-      unitName: json['unitName'],
-      propertyName: json['propertyName'],
-      guestName: json['guestName'],
-      guestEmail: json['guestEmail'],
-      lockId: json['lockId'],
-      address: json['address'],
-      latitude: (json['latitude'] as num).toDouble(),
-      longitude: (json['longitude'] as num).toDouble(),
-      checkIn: DateTime.parse(json['checkIn']),
-      checkOut: DateTime.parse(json['checkOut']),
-      totalPrice: (json['totalPrice'] as num).toDouble(),
-      status: json['status'],
-      payment: json['payment'],
-      review: json['review'],
-      created: DateTime.parse(json['created']),
+      id: json['id'] ?? 0,
+      unitId: json['unitId'] ?? 0,
+      guestId: json['guestId'] ?? 0,
+      unitName: json['unitName'] ?? '',
+      propertyName: json['propertyName'] ?? '',
+      guestName: json['guestName'] ?? '',
+      guestEmail: json['guestEmail'] ?? '',
+      lockId: json['lockId'] ?? '',
+      address: json['address'] ?? '',
+      latitude: (json['latitude'] ?? 0).toDouble(),
+      longitude: (json['longitude'] ?? 0).toDouble(),
+      checkIn:
+          DateTime.parse(json['checkIn'] ?? DateTime.now().toIso8601String()),
+      checkOut:
+          DateTime.parse(json['checkOut'] ?? DateTime.now().toIso8601String()),
+      totalPrice: (json['totalPrice'] ?? 0).toDouble(),
+      status: json['status'] ?? '',
+      payment: json['payment'] ?? '',
+      review: json['review'] ?? '',
+      created: DateTime.tryParse(json['created'] ?? '') ?? DateTime.now(),
     );
   }
 }

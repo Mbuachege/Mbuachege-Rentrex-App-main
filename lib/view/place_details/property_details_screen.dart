@@ -572,8 +572,6 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
                           location: property.region,
                           basePrice: property.priceFrom ?? 0.0,
                           guests: 1,
-                          checkIn: DateTime.now(),
-                          checkOut: DateTime.now().add(const Duration(days: 1)),
                         ),
                       ),
                     );

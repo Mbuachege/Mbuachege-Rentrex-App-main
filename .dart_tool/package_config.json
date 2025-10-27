@@ -221,7 +221,7 @@
       "name": "flutter",
       "rootUri": "file:///C:/Flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.8"
     },
     {
       "name": "flutter_blue_plus",
@@ -299,7 +299,7 @@
       "name": "flutter_localizations",
       "rootUri": "file:///C:/Flutter/packages/flutter_localizations",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.8"
     },
     {
       "name": "flutter_map",
@@ -371,13 +371,13 @@
       "name": "flutter_test",
       "rootUri": "file:///C:/Flutter/packages/flutter_test",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.8"
     },
     {
       "name": "flutter_web_plugins",
       "rootUri": "file:///C:/Flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.8"
     },
     {
       "name": "geoclue",
@@ -609,19 +609,19 @@
     },
     {
       "name": "leak_tracker",
-      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.9",
+      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-11.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_flutter_testing",
-      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.9",
+      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.10",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_testing",
-      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
+      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -965,7 +965,7 @@
       "name": "sky_engine",
       "rootUri": "file:///C:/Flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "3.8"
     },
     {
       "name": "smart_auth",
@@ -1041,7 +1041,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.4",
+      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.6",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -1137,9 +1137,9 @@
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
+      "rootUri": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.1"
     },
     {
       "name": "vm_service",
@@ -1203,8 +1203,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.8.1",
+  "generatorVersion": "3.9.2",
   "flutterRoot": "file:///C:/Flutter",
-  "flutterVersion": "3.32.7",
+  "flutterVersion": "3.35.6",
   "pubCache": "file:///C:/Users/DEVMBUA/AppData/Local/Pub/Cache"
 }

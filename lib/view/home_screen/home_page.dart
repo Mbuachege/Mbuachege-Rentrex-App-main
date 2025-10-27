@@ -318,18 +318,29 @@ class _HomePageState extends State<HomePage> {
   Widget _buildCarouselCard(HomePlaceModel item) {
     return GestureDetector(
       onTap: () {
+        // Center map on property
         _mapController?.animateCamera(
           CameraUpdate.newLatLng(
             LatLng(item.latitude ?? 0.0, item.longitude ?? 0.0),
           ),
         );
+
+        // Navigate to Property Details page
+        Future.delayed(const Duration(milliseconds: 300), () {
+          Get.to(() => PropertyDetailsScreen(
+                property: item,
+              ));
+        });
       },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 8),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
-          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 8)],
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.black26, blurRadius: 8, offset: Offset(0, 4))
+          ],
         ),
         child: Row(
           children: [
@@ -354,9 +365,7 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       item.title,
                       style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),
+                          fontWeight: FontWeight.bold, fontSize: 15),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),

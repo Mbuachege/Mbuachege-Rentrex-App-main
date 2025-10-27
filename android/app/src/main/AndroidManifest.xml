@@ -22,7 +22,7 @@
 
 
    <application
-        android:label="Prime Vacational Rentals"
+        android:label="Rentrestx App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -60,6 +60,8 @@
              <meta-data
         android:name="com.google.android.gms.wallet.api.enabled"
         android:value="true"/>
-          <service android:name="co.igloo.access.sdk.connection.LockConnectionService" />
+          <service
+        android:name="co.igloo.access.sdk.connection.LockConnectionService"
+        android:exported="false" />
     </application>
 </manifest>
