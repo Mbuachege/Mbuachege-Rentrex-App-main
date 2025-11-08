@@ -34,8 +34,8 @@ class _UnlockAccessScreenState extends State<UnlockAccessScreen> {
   // Unlock via Code
   bool _showCodeCard = false;
   String? _unlockCode;
-  DateTime? _startDate;
-  DateTime? _endDate;
+  late String _startDate = '';
+  late String _endDate = '';
 
   // Distance/ETA
   String? _distanceKm;
@@ -236,12 +236,11 @@ class _UnlockAccessScreenState extends State<UnlockAccessScreen> {
           Center(
             child: Text(
               (_startDate != null && _endDate != null)
-                  ? 'Code valid between\n${_fmtDate(_startDate!)} and ${_fmtDate(_endDate!)}'
+                  ? 'Code valid between\n$_startDate)} and $_endDate!)}'
                   : 'Validity not available',
               textAlign: TextAlign.center,
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: Colors.grey[700],
-              ),
+              style: theme.textTheme.bodySmall
+                  ?.copyWith(color: Colors.grey[700], fontSize: 14),
             ),
           ),
         ],
@@ -325,6 +324,10 @@ class _UnlockAccessScreenState extends State<UnlockAccessScreen> {
   void _handleUnlockViaCode() {
     if (booking == null) return;
 
+    // ✅ Clean the date format (remove extra 'T')
+    final cleanCheckIn = booking!.checkIn.replaceAll('T-', '-');
+    final cleanCheckOut = booking!.checkOut.replaceAll('T-', '-');
+
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -334,8 +337,8 @@ class _UnlockAccessScreenState extends State<UnlockAccessScreen> {
             lockId: booking!.lockId,
             bookingId: booking!.id,
             variance: 1,
-            startDate: booking!.checkIn,
-            endDate: booking!.checkOut,
+            startDate: cleanCheckIn,
+            endDate: cleanCheckOut,
             propertyName: booking!.propertyName,
             unitName: booking!.unitName,
             guestName: booking!.guestName,
@@ -364,15 +367,14 @@ class _UnlockAccessScreenState extends State<UnlockAccessScreen> {
               );
             } else {
               _unlockCode = snap.data;
-              _startDate = booking!.checkIn;
-              _endDate = booking!.checkOut;
+              _startDate = cleanCheckIn;
+              _endDate = cleanCheckOut;
 
               Future.microtask(() {
                 Navigator.of(ctx).pop();
                 setState(() {
                   _showCodeCard = true;
                 });
-                // ignore: use_build_context_synchronously
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(

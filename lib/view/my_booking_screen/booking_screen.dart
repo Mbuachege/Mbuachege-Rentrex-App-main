@@ -392,9 +392,10 @@ class _MyBookingsScreenState extends State<BookingScreen> {
 
   String _formatDate(String? dateStr) {
     if (dateStr == null || dateStr.isEmpty) return "N/A";
-    final date = DateTime.tryParse(dateStr);
+    final cleanStr = dateStr.replaceAll('T-', '-');
+    final date = DateTime.tryParse(cleanStr);
     if (date == null) return "N/A";
-    return DateFormat('dd MMM yyyy, hh:mm a').format(date);
+    return DateFormat('d MMM, h:mm a').format(date.toLocal());
   }
 
   Color _getStatusColor(String? status) {

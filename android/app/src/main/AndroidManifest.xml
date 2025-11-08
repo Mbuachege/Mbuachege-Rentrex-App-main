@@ -60,8 +60,8 @@
              <meta-data
         android:name="com.google.android.gms.wallet.api.enabled"
         android:value="true"/>
-          <service
+          <!-- <service
         android:name="co.igloo.access.sdk.connection.LockConnectionService"
-        android:exported="false" />
+        android:exported="false" /> -->
     </application>
 </manifest>

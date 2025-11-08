@@ -1,0 +1,3 @@
+rootProject.name = 'igloo_access'
+include ':sdk'        // add this
+include ':flutter'

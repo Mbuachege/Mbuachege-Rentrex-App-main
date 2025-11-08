@@ -10,8 +10,8 @@ class Booking {
   final String address;
   final double latitude;
   final double longitude;
-  final DateTime checkIn;
-  final DateTime checkOut;
+  final String checkIn;
+  final String checkOut;
   final double totalPrice;
   final String status;
   final String payment;
@@ -52,10 +52,8 @@ class Booking {
       address: json['address'] ?? '',
       latitude: (json['latitude'] ?? 0).toDouble(),
       longitude: (json['longitude'] ?? 0).toDouble(),
-      checkIn:
-          DateTime.parse(json['checkIn'] ?? DateTime.now().toIso8601String()),
-      checkOut:
-          DateTime.parse(json['checkOut'] ?? DateTime.now().toIso8601String()),
+      checkIn: json['checkIn'] ?? '',
+      checkOut: json['checkOut'] ?? '',
       totalPrice: (json['totalPrice'] ?? 0).toDouble(),
       status: json['status'] ?? '',
       payment: json['payment'] ?? '',

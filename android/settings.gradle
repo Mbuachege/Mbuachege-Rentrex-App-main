@@ -14,14 +14,14 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven {
-            url "https://gitlab.com/api/v4/projects/64441730/packages/maven"
-            name "GitLab"
-            credentials(PasswordCredentials) {
-                username = "Private-Token"
-                password = "glpat-GicaUnkWli5oINwbDemv4G86MQp1Omk2Z29qCw.01.121anq4wz"
-            }
-        }
+        // maven {
+        //     url "https://gitlab.com/api/v4/projects/64441730/packages/maven"
+        //     name "GitLab"
+        //     credentials(PasswordCredentials) {
+        //         username = "Private-Token"
+        //         password = "glpat-GicaUnkWli5oINwbDemv4G86MQp1Omk2Z29qCw.01.121anq4wz"
+        //     }
+        // }
     }
 }
 

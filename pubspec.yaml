@@ -12,7 +12,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  # igloo_access:
+  #   path: ../igloo_access  
   cupertino_icons: ^1.0.2
   get: ^4.7.2
   pinput: ^2.2.31

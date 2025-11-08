@@ -93,6 +93,7 @@ class _SelectYourPaymentScreenState extends State<SelectYourPaymentScreen> {
         backgroundColor: ColorFile.whiteColor,
         elevation: 0,
         centerTitle: true,
+        automaticallyImplyLeading: false, // 👈 disables the default back arrow
         title: const Text(
           StringConfig.selectYourPayment,
           style: TextStyle(
@@ -101,22 +102,6 @@ class _SelectYourPaymentScreenState extends State<SelectYourPaymentScreen> {
             fontFamily: satoshiMedium,
             fontWeight: FontWeight.w500,
             fontSize: SizeFile.height22,
-          ),
-        ),
-        leading: GestureDetector(
-          onTap: () => Get.back(),
-          child: Padding(
-            padding: const EdgeInsets.only(
-              left: SizeFile.height1,
-              top: SizeFile.height20,
-              bottom: SizeFile.height20,
-            ),
-            child: Image.asset(
-              AssetImagePaths.backArrow2,
-              height: SizeFile.height25,
-              width: SizeFile.height45,
-              color: ColorFile.onBordingColor,
-            ),
           ),
         ),
       ),
@@ -184,20 +169,28 @@ class _SelectYourPaymentScreenState extends State<SelectYourPaymentScreen> {
 
           const SizedBox(height: 20),
 
-          // 2️⃣ Label above Google Pay Button
-          const Text(
-            "Tap the button below to pay securely with Google Pay:",
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              color: Colors.black87,
+          // 2️⃣ Highlighted Label above Google Pay Button
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+            decoration: BoxDecoration(
+              color: Color(0xFFE8F0FE), // light blue background
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: const Text(
+              "💳 Tap the button below to pay securely with Google Pay",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF4285F4), // Google blue
+              ),
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 16),
 
           // 3️⃣ Google Pay Button inside Card
           Card(
-            elevation: 4,
+            elevation: 2,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             margin: const EdgeInsets.symmetric(vertical: 10),
@@ -205,7 +198,7 @@ class _SelectYourPaymentScreenState extends State<SelectYourPaymentScreen> {
               padding: const EdgeInsets.all(12.0),
               child: SizedBox(
                 width: double.infinity,
-                height: 70,
+                height: 50,
                 child: FutureBuilder<PaymentConfiguration>(
                   future: PaymentConfiguration.fromAsset('gpay.json'),
                   builder: (context, snapshot) {

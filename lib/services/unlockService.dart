@@ -10,8 +10,8 @@ class UnlockService {
     required String lockId,
     required int bookingId,
     required int variance,
-    required DateTime startDate,
-    required DateTime endDate,
+    required String startDate,
+    required String endDate,
     required String propertyName,
     required String unitName,
     required String guestName,
@@ -25,8 +25,8 @@ class UnlockService {
 
       final payload = {
         "variance": variance,
-        "startDate": startDate.toIso8601String(),
-        "endDate": endDate.toIso8601String(),
+        "startDate": startDate,
+        "endDate": endDate,
         "propertyName": propertyName,
         "unitName": unitName,
         "guestName": guestName,
